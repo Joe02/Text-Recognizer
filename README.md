@@ -1,4 +1,4 @@
-# text_recognizer
+Text Recognizer
 
 A new Flutter application.
 
