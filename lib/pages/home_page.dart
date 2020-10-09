@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/rendering.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:text_recognizer/pages/recognition_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -160,8 +161,9 @@ class HomePageState extends State<HomePage> {
     setState(() {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
-
-        //TODO Navigate to recognition screen.
+        if (_image != null) {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => RecognitionPage(_image)));
+        }
       } else {
         print('No image selected.');
       }
@@ -174,8 +176,9 @@ class HomePageState extends State<HomePage> {
     setState(() {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
-
-        //TODO Navigate to recognition screen.
+        if (_image != null) {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => RecognitionPage(_image)));
+        }
       } else {
         print('No image selected.');
       }
