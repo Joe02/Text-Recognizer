@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:clipboard_manager/clipboard_manager.dart';
+// import 'package:clipboard_manager/clipboard_manager.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -81,27 +81,27 @@ class RecognitionPageState extends State<RecognitionPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 20.0, horizontal: 8.0),
-                          child: GestureDetector(
-                              onTap: () {
-                                ClipboardManager.copyToClipBoard(
-                                        recognizerController.text)
-                                    .then((result) {
-                                  final snackBar = SnackBar(
-                                    content: Text(
-                                        'Copiado para área de transferência.'),
-                                  );
-                                  Scaffold.of(context).showSnackBar(snackBar);
-                                });
-                                ;
-                              },
-                              child: Icon(
-                                Icons.content_copy,
-                                color: Colors.blue,
-                              )),
-                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.symmetric(
+                        //       vertical: 20.0, horizontal: 8.0),
+                        //   child: GestureDetector(
+                        //       onTap: () {
+                        //         ClipboardManager.copyToClipBoard(
+                        //                 recognizerController.text)
+                        //             .then((result) {
+                        //           final snackBar = SnackBar(
+                        //             content: Text(
+                        //                 'Copiado para área de transferência.'),
+                        //           );
+                        //           Scaffold.of(context).showSnackBar(snackBar);
+                        //         });
+                        //         ;
+                        //       },
+                        //       child: Icon(
+                        //         Icons.content_copy,
+                        //         color: Colors.blue,
+                        //       )),
+                        // ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
                               vertical: 20.0, horizontal: 8.0),
