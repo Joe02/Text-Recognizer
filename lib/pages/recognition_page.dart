@@ -130,7 +130,6 @@ class RecognitionPageState extends State<RecognitionPage> {
     cloudVisionText = await cloudTextRecognizer.processImage((visionImage));
 
     setState(() {
-      print(visionText.text);
 
       if (visionText.text == "" || visionText.text == null) {
         recognizedText =
